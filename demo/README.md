@@ -1,7 +1,3 @@
-# react-sensor-stream
-
-Demo of a (mock) sensor stream in React
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -9,29 +5,29 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Purpose
 
 This project is really a POC / demo to simulate React application that reads a stream of data (this has been largely scaled back)
-so as not provide any proprietary data structures) and is able to display that data in a clean UI.  Overall, this is designed to be
+so as not provide any proprietary data structures) and is able to display that data in a clean UI.  Overall, this is designed to be 
 extremely simple, and really is being used as a part of my portfolio to demonstrate development skills with Node and React (albeit this
 example is still limited).
 
 ## Items to Address
 
 - I still want to address a better streaming simulation.  In the real-world, this stream would be coming from an external source such as Kafka.
-  I'll be putting in some additional work to effectively get the streaming closer to a real example.
-- While I have put basic filtering in place (on all fields), I'm going to evaluate other options for more
-  flexible and robust filtering.  I'm also working on improving the sorting options for this.
+I'll be putting in some additional work to effectively get the streaming closer to a real example.
+- While I have put basic filtering in place (on all fields), I'm going to evaluate other options for more 
+flexible and robust filtering.  I'm also working on improving the sorting options for this.
 - I put the data into a table for the time being; I had thought about leveraging a card model, but that might not prove to be
-  the optimal user experience for this application.
+the optimal user experience for this application.
 - Yes, I will work on my .css design as well... I had 3-5 hours to get this completed, so it is very much in a rudimentary stage.
 
 ## Components
 
-This project consists of 2 components:
+This project consists of 2 components:  
 - The core React App [demo](./)
-- A mock [generator](../sensor-stream-generator) application is a basic NodeJS application to randomly generate data for the React application.
+- A mock [generator](../sensor-stream-generator) application is a basic NodeJS application to randomly generate data for the React application. 
 
 ## Running the Generator
 
-To run this entire package locally, first go to the [generator](../sensor-stream-generator) and execute `npm start`.  This will start the generator
+To run this entire package locally, first go to the [generator](../sensor-stream-generator) and execute `npm start`.  This will start the generator 
 application locally listening at [http://localhost:4000](http://localhost:4000).  You can verify this through Postman with a GET request to [localhost:4000/sensors](http://localhost:4000/sensors).
 **Note**: this application does not have any UI component associated with it.
 
@@ -65,4 +61,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/c
 ### Advanced Configuration
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
