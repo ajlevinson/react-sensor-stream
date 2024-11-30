@@ -6,8 +6,6 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-const sensorStream = [];
-
 const sensor_ids = ['sensor-005','sensor-010','sensor-012','sensor-024','sensor-12345'];
 
 const randomNumber = (min, max, decimalPlaces) => {
@@ -17,10 +15,11 @@ const randomNumber = (min, max, decimalPlaces) => {
 }
 
 const generate = () => {
-    for (let i = 0; i < 100; i++) {
+    let sensorStream = [];
+    for (let i = 0; i < 1000; i++) {
         const randomIndex = Math.floor(Math.random() * sensor_ids.length);
         const sensor_id = sensor_ids[randomIndex];
-        const data = {
+        let data = {
             "sensor_id": sensor_id,
             "decibel_avg": randomNumber(1,200,1),
             "report_date": Math.round(generateReportDate())
@@ -28,6 +27,8 @@ const generate = () => {
         console.log("Sensor Data: ", data);
         sensorStream.push(data);
     }
+    console.log("Total data reports: ", sensorStream.length);
+
     return sensorStream;
 }
 
