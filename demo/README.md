@@ -12,12 +12,21 @@ example is still limited).
 ## Items to Address
 
 - I still want to address a better streaming simulation.  In the real-world, this stream would be coming from an external source such as Kafka.
-I'll be putting in some additional work to effectively get the streaming closer to a real example.
-- While I have put basic filtering in place (on all fields), I'm going to evaluate other options for more 
-flexible and robust filtering.  I'm also working on improving the sorting options for this.
+  I'll be putting in some additional work to effectively get the streaming closer to a real example.
+- While I have put basic filtering in place (on all fields), I'm going to evaluate other options for more
+  flexible and robust filtering.  I'm also working on improving the sorting options for this.
 - I put the data into a table for the time being; I had thought about leveraging a card model, but that might not prove to be
-the optimal user experience for this application.
+  the optimal user experience for this application.
+- I altered the "mock" generator to reset the data each time that the API is called; this was intentional, though it doesn't truly
+  represent how actual stream processing would work (I did this to allow for ease of testing without having the state being incremented by a specific amount).
+  I will revert this back to how I had this setup originally once I'm satisfied with localized testing with a single data stream.
 - Yes, I will work on my .css design as well... I had 3-5 hours to get this completed, so it is very much in a rudimentary stage.
+
+## Next Steps
+
+I intend to containerize this and deploy this in a full integration environment, either GCP (Cloud Run) or AWS (ECS).
+The purpose would then be to wire up an actual streaming source beyond the local API, and build some automations around it
+to better perform functional testing.  More to come on that.
 
 ## Components
 
