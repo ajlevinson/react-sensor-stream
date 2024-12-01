@@ -23,7 +23,7 @@ const SensorGrid = () => {
         };
     }, []);
 
-    const [colDefs, setColDefs] = useState([
+    const [colDefs] = useState([
         {headerName: "Sensor Id", field: "sensor_id"},
         {headerName: "Average Dbm", field: "decibel_avg"},
         {headerName: "Report Date", field: "report_date"}
