@@ -15,7 +15,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: /home/runner/work/react-sensor-stream/demo
+        working-directory: /home/runner/work/react-sensor-stream/react-sensor-stream/demo
           
     strategy:
       matrix:
@@ -29,6 +29,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm install
+    - run: npm ci
     - run: npm run build --if-present
     - run: npm test
