@@ -21,6 +21,7 @@ body {
 /* Header Styles */
 .header {
   margin-top: 30px;
+  width: 60%;
 }
 
 .search-input {
@@ -31,98 +32,6 @@ body {
   border-radius: 100px;
   border: 1px solid #ccc;
 }
-
-/* Genre and Filter Bar Styles */
-.filter-bar {
-  display: flex;
-  justify-content: right;
-}
-
-.filter-slot {
-  background-color: #2c2c2c;
-  padding: 0 25px;
-  margin: 10px;
-  border-radius: 50px;
-}
-
-.filter-dropdown {
-  padding: 8px;
-  margin: 10px;
-  border-radius: 5px;
-  background-color: #fff;
-  color: #333;
-}
-
-/* Movies Grid Styles */
-.movies-grid, .watchlist {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 250px);
-  gap: 2rem 2rem;  
-  padding: 1rem;
-  justify-content: center;
-}
-
-/* Movie Card Styles */
-.movie-card {
-  background-color: #272727;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.2s ease-in-out;
-  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .5);
-}
-
-.movie-card:hover {
-  transform: scale(1.03);
-}
-
-.movie-card img {
-  width: 250px;
-  height: auto;
-  display: block;
-  object-fit: contain;
-  object-position: center;
-}
-
-.movie-card-info {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  text-align: center;
-}
-
-.movie-card-title {
-  font-size: 1.1rem;
-  font-weight: bold;
-}
-
-.movie-card-rating {
-  font-size: 0.9rem;
-  font-weight: bold;
-  background:#141414;
-  padding: 3px 10px;
-  margin: 0 auto;
-  width: 50px;
-  border-radius: 50px;
-}
-
-.movie-card-genre {
-  font-size: 0.9rem;
-  margin-right: 10px;
-}
-
-/* Watchlist Button Styles */
-.watchlist-btn {
-  border: none;
-  background: #2196F3;
-  color: white;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
 
 /* Footer Styles */
 .footer {
@@ -142,11 +51,18 @@ body {
   margin: 25px 0;
 }
 
+.header-child {
+  display: inline-block;
+  width: 50%;
+  align-content: center;
+}
+
 .logo {
-  width: 20%;
+  width: 30%;
   max-width: 40px;
   height: 40px;
   margin: 0 auto;
+  align-content: center;
 }
 
 .app-subtitle {
@@ -154,6 +70,7 @@ body {
   color: black;
   margin: 25px auto;
   font-weight: 500;
+  text-align: -moz-left;
 }
 
 nav {
@@ -200,42 +117,6 @@ nav a:hover {
   height: 0;
 }
 
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #141414;
-  transition: .4s;
-  border-radius: 34px;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 20px;
-  width: 20px;
-  left: 2px;
-  bottom: 2px;
-  background-color: white;
-  transition: .4s;
-  border-radius: 50%;
-}
-
-.slider-label {
-  color: #fff; 
-  font-size: 12px; 
-  width: 100%; 
-  line-height: 24px; 
-  transition: opacity 0.4s ease; 
-}
-
-input:checked + .slider:before {
-  transform: translateX(125px); /* Move the circle to the other side */
-}
-
-input:checked + .slider {
-  background-color: #FFA100;
+.ag-header-cell-label {
+  font-weight: bold;
 }
