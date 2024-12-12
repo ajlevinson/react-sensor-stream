@@ -18,13 +18,13 @@ const randomNumber = (min, max, decimalPlaces) => {
 }
 
 const generate = () => {
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 25; i++) {
         const randomIndex = Math.floor(Math.random() * sensor_ids.length);
         const sensor_id = sensor_ids[randomIndex];
         let data = {
             "record_id": recordNumber,
             "sensor_id": sensor_id,
-            "decibel_avg": randomNumber(1,200,1),
+            "decibel_avg": randomNumber(1,25,1),
             "report_date": Math.round(generateReportDate())
         }
         console.log("Sensor Data: ", data);
@@ -37,7 +37,7 @@ const generate = () => {
 }
 
 const generateReportDate = () => {
-    const reportDate = new Date('2024-11-01T01:00:00.271Z').getTime();
+    const reportDate = new Date('2024-12-10T01:00:00.271Z').getTime();
     const constructionDate = new Date(Date.now()).getTime();
     return (reportDate + Math.random() * (constructionDate - reportDate));
 }

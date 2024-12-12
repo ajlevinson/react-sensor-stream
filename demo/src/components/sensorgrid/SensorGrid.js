@@ -10,7 +10,7 @@ const SensorGrid = () => {
             fetch('http://localhost:4000/sensors') // Fetch data from server
                 .then((result) => result.json())
                 .then((rowData) => setRowData(rowData)); // Update state of `rowData`
-        }, 10000);
+        }, 30000);
 
         return () => clearInterval(interval);
     });
